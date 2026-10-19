@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notely — Notes</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <h1>Notely</h1>
+      <div class="head-actions">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+        <button class="new-btn" id="newBtn" aria-label="New note">+</button>
+      </div>
+    </div>
+
+    <div class="search">
+      <input type="search" id="searchInput" placeholder="Search notes…" autocomplete="off">
+    </div>
+
+    <ul class="note-list" id="noteList"></ul>
+    <p class="list-empty" id="listEmpty">No notes yet. Create one →</p>
+
+    <div class="sidebar-foot">
+      <span id="noteCount">0 notes</span>
+      <button id="clearAll">Delete all</button>
+    </div>
+  </aside>
+
+  <main class="editor">
+    <button class="menu-btn" id="menuBtn" aria-label="Open note list">☰</button>
+
+    <div class="editor-empty" id="editorEmpty">
+      <div class="empty-art">📝</div>
+      <h2>Select a note</h2>
+      <p>Or create a new one to start writing.</p>
+    </div>
+
+    <div class="editor-pane" id="editorPane" hidden>
+      <input type="text" class="note-title" id="noteTitle" placeholder="Untitled note" maxlength="80">
+      <div class="editor-meta">
+        <span id="noteDate"></span>
+        <span id="noteWords"></span>
+      </div>
+      <textarea class="note-body" id="noteBody" placeholder="Start writing…"></textarea>
+      <div class="editor-actions">
+        <span class="saved" id="savedIndicator">Saved</span>
+        <button class="delete-btn" id="deleteBtn">Delete note</button>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
