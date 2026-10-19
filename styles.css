@@ -10,6 +10,11 @@
   --danger: #d9534f;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+
 body.dark {
   --bg: #16140f;
   --sidebar: #1e1b15;
